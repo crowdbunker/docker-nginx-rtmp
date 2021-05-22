@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   nginx-rtmp:
@@ -12,3 +12,6 @@ services:
       - RTMP_PORT=1935
     volumes:
       - ./certs:/opt/certs
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf.template
