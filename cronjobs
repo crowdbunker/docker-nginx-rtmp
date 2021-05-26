@@ -1,0 +1,1 @@
+0 * * * * find /opt/data/records/* -mtime +2 -exec rm -f {} \;
